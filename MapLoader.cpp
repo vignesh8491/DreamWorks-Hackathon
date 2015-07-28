@@ -80,7 +80,7 @@ MapLoader::loadVDBMap(char* filename)
 				openvdb::Coord xyz(i,j,0);
 				grid_array[i][j]=accessor.getValue(xyz);
 				//std::cout << "Grid" << xyz << " = " << accessor.getValue(xyz) << std::endl;
-				if (accessor.getValue(xyz)<5){
+				if (accessor.getValue(xyz)<0){
 					mapData[i][j]=false;
 				}
 				else{
